@@ -5,9 +5,8 @@ import ibmiotf.application
 import ibmiotf.device
 import random
 
-
 #Provide your IBM Watson Device Credentials
-organization = "4aqwut"
+organization = "qo7yo9"
 deviceType = "temperature"
 deviceId = "12345"
 authMethod = "token"
