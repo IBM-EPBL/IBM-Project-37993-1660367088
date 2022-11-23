@@ -22,9 +22,10 @@ client = wiotp.sdk.device.DeviceClient(config=myConfig, logHandlers=None)
 client.connect()
 
 while True:
-    temp=random.randint(-20,125)
-    hum=random.randint(0,100)
-    myData={'temperature':temp, 'humidity':hum}
+    temperature=random.randint(0,250)
+    smokeofgas=random.randint(0,300)
+    firealart=random.randint(-55,225)
+    myData={'temperature':temperature, 'humidity':smokeofgas,'AlartSystem':firealart}
     client.publishEvent(eventId="status", msgFormat="json", data=myData, qos=0, onPublish=None)
     print("Published data Successfully: %s", myData)
     client.commandCallback = myCommandCallback
